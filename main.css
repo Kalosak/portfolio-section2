@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav ul {
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    background-color: #AFE9FF;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 25px 55px 15px 55px;
+  }
+  
+  nav ul li a {
+    color: #326FC0;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+
+    color: #1D3775;
+  }
+
+.intro {
+top: 0;
+min-height: 55vh;
+padding-top: 45vh;
+background-color: #AFE9FF;
+text-align: center;
+}
+
+.work {
+  background-color: rgb(206, 241, 255);
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.work-header {
+  padding-bottom: 110px;
+}
+
+.figures {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-1 {
+  border: solid thin black;
+  border-radius: 50%;
+}
+
+.project {
+    text-decoration: none;
+  }
+
+figure {
+  display: flex;
+  flex-flow: column;
+  max-width: 220px;
+  margin: auto;
+}
+
+figure img {
+  max-width: 220px;
+  max-height: 220px;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.project-title {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  padding: 3px;
+  border-top: solid rgb(124, 50, 100);
+}
+
+.project-title-2 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  padding: 3px;
+  border-top: solid #8CC84B;
+}
+
+.project-title-3 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  padding: 3px;
+  border-top: solid #F16529
+}
+
+.project-title-4 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  padding: 3px;
+  border-top: solid #222;
+}
+
+.contact {
+  text-align: center;
+  background: rgb(114, 189, 243);
+  padding-bottom: 160px;
+}
+
+.contact-header {
+  padding: 160px 0 110px;
+}
+
+.contact-details {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 35px 45px 35px;
+  list-style-type: none;
+  border: 2px solid #1D3775;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #AFE9FF;
+  color: #1D3775;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contact-details:hover {
+  background: rgb(214, 234, 255);
+  color: #326FC0;
+}
+
+footer {
+  background-color: #1D3775;
+  padding: 20px;
+
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    margin: 20px;
+  }
+  .project {
+    margin: 40px 0;
+  }
+
+  .figures {
+    display: flex;
+    flex-direction: column;
+  }
+
+  figure {
+    margin-bottom: 50px;
+    margin-top: 10px;
+  }

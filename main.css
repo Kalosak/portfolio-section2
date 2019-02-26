@@ -26,11 +26,19 @@ nav ul {
   }
 
 .intro {
-top: 0;
-min-height: 55vh;
-padding-top: 45vh;
-background-color: #AFE9FF;
-text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 55vh;
+  padding-top: 45vh;
+  background-color: #AFE9FF;
+}
+
+.intro div {
+  border: 1px solid yellow;
+  width: 400px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .work {

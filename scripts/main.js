@@ -1,5 +1,5 @@
-import { films } from './films.js'
-import { planets } from './planets.js'
+import { films } from './data/films.js/index.js'
+import { planets } from '../data/planets.js'
 
 films.sort((a,b) => (a.episode_id > b.episode_id) ? 1 : -1)
 

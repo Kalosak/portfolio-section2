@@ -58,7 +58,7 @@ nav ul {
 }
 
 .workbg {
-  background-image: url('/CloneStandingRevised.png');
+  background-image: url('/CloneStandingRevised2.png');
   background-size: 100% 100%;
 }
 
@@ -99,7 +99,7 @@ figure img {
   color: black;
   font-size: 1.5rem;
   padding: 3px;
-  border-top: solid rgb(124, 50, 100);
+  border-top: solid #000;
 }
 
 .project-title-2 {
@@ -107,7 +107,7 @@ figure img {
   color: black;
   font-size: 1.5rem;
   padding: 3px;
-  border-top: solid #8CC84B;
+  border-top: solid #000;
 }
 
 .project-title-3 {
@@ -115,7 +115,7 @@ figure img {
   color: black;
   font-size: 1.5rem;
   padding: 3px;
-  border-top: solid #F16529
+  border-top: solid #000;
 }
 
 .project-title-4 {
@@ -123,7 +123,7 @@ figure img {
   color: black;
   font-size: 1.5rem;
   padding: 3px;
-  border-top: solid #222;
+  border-top: solid #000;
 }
 
 .contact {

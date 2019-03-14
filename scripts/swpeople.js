@@ -21,10 +21,11 @@ const allHomeWorlds = people.map(person => {
         home: foundWorld.name,
         eye_color: person.eye_color,
         imagePath: `https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
+        skin: person.skin_color,
     }
 })
 
-// console.log(allHomeWorlds)
+console.log(allHomeWorlds)
 
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
@@ -32,13 +33,16 @@ mainContainer.className = 'container'
 allHomeWorlds.forEach((person) => {
     let personElement = document.createElement('div')
     let planetElement = document.createElement('h1')
+    let skinElement = document.createElement('h1')
     let imageElement = document.createElement('img')
 
     personElement.className = 'box'
     personElement.textContent = person.name
     planetElement.textContent = person.home
+    skinElement.textContent = person.skin
     imageElement.src = person.imagePath
    
+    personElement.appendChild(skinElement)
     personElement.appendChild(planetElement)
     personElement.appendChild(imageElement)
     mainContainer.appendChild(personElement)

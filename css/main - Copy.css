@@ -8,8 +8,7 @@ nav ul {
     text-align: right;
     position: fixed;
     width: 100%;
-    background-color: #000;
-    border-bottom: solid #fff;
+    background-color: #AFE9FF;
   }
   
   nav ul li {
@@ -18,36 +17,28 @@ nav ul {
   }
   
   nav ul li a {
-    color: #fff;
+    color: #326FC0;
     text-decoration: none;
   }
   
   nav ul li a:hover {
-    color: rgb(80, 74, 74);
+    color: #1D3775;
   }
 
 .intro {
-  width:100vw; 
-  height:100vh;
-  margin:0;
-}
-
-.introbg {
-  background-image: url('/HomePageWallpaper.jpg');
-  background-size: 100% 100%;
-}
-
-.intro h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  text-align: center;
   min-height: 55vh;
   padding-top: 45vh;
-  color: #000;
-  text-shadow: #FFF 1px 0 15px;
-  -webkit-text-stroke: thin white;
-  /* text-shadow: 1px 1px 1px #fff, 3px 3px 5px #fff; */
+  background-color: #AFE9FF;
+}
+
+.intro div {
+  /* border: 1px solid yellow; */
+  width: 400px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .work {
@@ -55,11 +46,6 @@ nav ul {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 200px;
-}
-
-.workbg {
-  background-image: url('/CloneStandingRevised.png');
-  background-size: 100% 100%;
 }
 
 .work-header {
@@ -130,18 +116,6 @@ figure img {
   text-align: center;
   background: rgb(114, 189, 243);
   padding-bottom: 160px;
-  color: rgba(255, 255, 255, 0.815);
-  text-shadow: #000 1px 0 20px;
-  /* -webkit-text-stroke: thin white; */
-}
-
-/* .contact p {
-  color: black;
-} */
-
-.contactbg {
-  background-image: url('/KyloRenRevised.jpg');
-  background-size: 100% 100%;
 }
 
 .contact-header {
@@ -153,25 +127,24 @@ figure img {
   font-weight: bold;
   margin: 0 35px 45px 35px;
   list-style-type: none;
-  border: 2px solid rgb(0, 22, 61);
+  border: 2px solid #1D3775;
   border-radius: 100%;
   width: 100px;
   height: 100px;
   line-height: 100px;
-  background: rgb(147, 168, 226);
-  color: rgb(0, 22, 61);
+  background: #AFE9FF;
+  color: #1D3775;
   text-decoration: none;
   text-align: center;
 }
 
 .contact-details:hover {
-  background: rgb(167, 203, 241);
-  color: rgb(18, 69, 134);
+  background: rgb(214, 234, 255);
+  color: #326FC0;
 }
 
 footer {
-  background-color: #000;
-  border-top: thin solid white;
+  background-color: #1D3775;
   padding: 20px;
 
 }

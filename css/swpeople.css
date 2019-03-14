@@ -4,6 +4,7 @@ nav ul {
     width: 100%;
     background-color: #000;
     border-bottom: solid #fff;
+    z-index: 9999;
   }
   
   nav ul li {
@@ -18,6 +19,10 @@ nav ul {
   
   nav ul li a:hover {
     color: rgb(80, 74, 74);
+  }
+
+  header {
+    padding: 50px;
   }
 
 .container {

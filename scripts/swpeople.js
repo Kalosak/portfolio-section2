@@ -36,12 +36,16 @@ allHomeWorlds.forEach((person) => {
     let skinElement = document.createElement('h1')
     let imageElement = document.createElement('img')
 
+    let strSkin = "Skin: "
+    let strHome = "Homeworld: "
+
     personElement.className = 'box'
     personElement.textContent = person.name
-    planetElement.textContent = person.home
-    skinElement.textContent = person.skin
+    planetElement.textContent = strHome + person.home
+    skinElement.textContent = strSkin + person.skin
     imageElement.src = person.imagePath
    
+    
     personElement.appendChild(skinElement)
     personElement.appendChild(planetElement)
     personElement.appendChild(imageElement)

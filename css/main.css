@@ -53,7 +53,7 @@ nav ul {
 .work {
   background-color: rgb(206, 241, 255);
   text-align: center;
-  padding-top: 50px;
+  padding-top: 180px;
   padding-bottom: 200px;
 }
 
@@ -132,12 +132,8 @@ figure img {
   padding-bottom: 160px;
   color: rgba(255, 255, 255, 0.815);
   text-shadow: #000 1px 0 20px;
-  /* -webkit-text-stroke: thin white; */
+  padding-bottom: 200px;
 }
-
-/* .contact p {
-  color: black;
-} */
 
 .contactbg {
   background-image: url('/KyloRenRevised.jpg');

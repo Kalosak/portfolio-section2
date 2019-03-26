@@ -33,7 +33,7 @@ nav ul {
 }
 
 .introbg {
-  background-image: url('/HomePageWallpaper.jpg');
+  background-image: url('/pics/HomePageWallpaper.jpg');
   background-size: 100% 100%;
 }
 
@@ -58,7 +58,7 @@ nav ul {
 }
 
 .workbg {
-  background-image: url('/CloneStandingRevised2.png');
+  background-image: url('/pics/CloneStandingRevised2.png');
   background-size: 100% 100%;
 }
 
@@ -136,7 +136,7 @@ figure img {
 }
 
 .contactbg {
-  background-image: url('/KyloRenRevised.jpg');
+  background-image: url('/pics/KyloRenRevised.jpg');
   background-size: 100% 100%;
 }
 

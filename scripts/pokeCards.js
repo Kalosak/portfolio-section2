@@ -90,7 +90,6 @@ function fetchSinglePokemon(id) {
     })
 }
 
-
 const newPokemonButton = document.querySelector('button')
 
 newPokemonButton.addEventListener('click', function() {

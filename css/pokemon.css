@@ -44,3 +44,54 @@ button {
     height: 140px;
     text-align: center;
 }
+
+.scene {
+    width: 200px;
+    height: 260px;
+    border: 1px solid #CCC;
+    margin: 40px 0;
+    perspective: 600px;
+  }
+
+  
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+    padding-top: 20px;
+}
+
+.card__face--back {
+  /* background-image: url(/pics/Pokeball\ long\ wallpaper.jpg);
+  back */
+
+  transform: rotateY(180deg);
+}
+
+img {
+
+}
+
+.backImage {
+    height: 258px;
+    width: 198px;
+}
+

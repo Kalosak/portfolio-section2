@@ -8,14 +8,13 @@ class Pokemon {
 
 const mainContainer = document.querySelector('.container')
 
-function createPokeCard(pokeData) {
-    let card = document.createElement('div')
-    card.className = 'box'
+function cardFront(pokeData) {
+    let cardFront = document.createElement('div')
+    cardFront.className = 'card__face card__face--front'
     let figure = document.createElement('figure')
     let caption = document.createElement('figcaption')
     let image = document.createElement('img')
 
-    //let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
     caption.textContent = pokeData.name
     if(pokeData.id !== 0) {
         image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
@@ -25,8 +24,34 @@ function createPokeCard(pokeData) {
     
     figure.appendChild(image)
     figure.appendChild(caption)
-    card.appendChild(figure)
-    mainContainer.appendChild(card)
+    cardFront.appendChild(figure)
+    return cardFront
+}
+
+function cardBack(pokeData) {
+    let cardBack = document.createElement('div')
+    let backImage = document.createElement('img')
+    backImage.className = 'backImage'
+    backImage.src = './pics/pokeball5.jpg'
+    cardBack.className = 'card__face card__face--back'
+    cardBack.appendChild(backImage)
+    return cardBack
+}
+
+function createPokeCard(pokeData) {
+    let scene = document.createElement('div')
+    scene.className = 'scene'
+    let card = document.createElement('div')
+    card.className = 'card'
+    
+    card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+    })
+
+    card.appendChild(cardFront(pokeData))
+    card.appendChild(cardBack(pokeData))
+    scene.appendChild(card)
+    mainContainer.appendChild(scene)
 }
 
 pokemon.forEach(singleMon => {

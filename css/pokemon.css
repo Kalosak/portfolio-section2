@@ -1,24 +1,24 @@
 nav ul {
-    text-align: right;
-    position: fixed;
-    width: 100%;
-    background-color: #000;
-    border-bottom: solid #fff;
-    /* z-index: 9999; */
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  border-bottom: solid #fff;
+  z-index: 9999;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 25px 55px 15px 55px;
+  display: inline-block;
+  margin: 25px 55px 15px 55px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: rgb(80, 74, 74);
+  color: rgb(80, 74, 74);
 }
 
 main {
@@ -35,6 +35,10 @@ main {
 
 button {
     width: 300px;
+    height: 80px;
+    background-color: aquamarine;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 .box {
@@ -77,12 +81,21 @@ button {
     padding-top: 20px;
 }
 
+.infoDiv {
+  position: relative;
+  font-size: 1.5rem;
+
+}
+
 .card__face--back {
   transform: rotateY(180deg);
 }
 
 .backImage {
-    height: 258px;
-    width: 198px;
+  position: absolute;
+  left: 0;
+  opacity: 0.33;
+  height: 258px;
+  width: 198px;
 }
 

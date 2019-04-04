@@ -1,10 +1,10 @@
 import { pokemon } from '../scripts/pokemon.js'
 
-class Pokemon {
-    constructor(id) {
-        this.id = id
-    }
-}
+// class Pokemon {
+//     constructor(id) {
+//         this.id = id
+//     }
+// }
 
 const mainContainer = document.querySelector('.container')
 
@@ -28,6 +28,24 @@ function cardFront(pokeData) {
     return cardFront
 }
 
+function cardInfo(pokeData) {
+    let infoDiv = document.createElement('div')
+    infoDiv.className = 'infoDiv'
+    let moveOne = document.createElement('p')
+    let moveTwo = document.createElement('p')
+    let moveThree = document.createElement('p')
+    let moveFour = document.createElement('p')
+    moveOne.textContent = pokeData.moves[0].move.name
+    moveTwo.textContent = pokeData.moves[1].move.name
+    moveThree.textContent = pokeData.moves[2].move.name
+    moveFour.textContent = pokeData.moves[3].move.name
+    infoDiv.appendChild(moveOne)
+    infoDiv.appendChild(moveTwo)
+    infoDiv.appendChild(moveThree)
+    infoDiv.appendChild(moveFour)
+    return infoDiv
+}
+
 function cardBack(pokeData) {
     let cardBack = document.createElement('div')
     let backImage = document.createElement('img')
@@ -35,6 +53,7 @@ function cardBack(pokeData) {
     backImage.src = './pics/pokeball5.jpg'
     cardBack.className = 'card__face card__face--back'
     cardBack.appendChild(backImage)
+    cardBack.appendChild(cardInfo(pokeData))
     return cardBack
 }
 
@@ -74,6 +93,12 @@ function matchIdToImage(aPokemon) {
     if(aPokemon.id > 99) {
         aPokemon.imageID = aPokemon.id
     }
+
+    let dashIndex = aPokemon.name.indexOf('-')
+    if (dashIndex !== -1) {
+        // Found a pokemon named who has a dash in their name
+        aPokemon.name = aPokemon.name.slice(0, dashIndex)
+    }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
     return aPokemon
 }
@@ -90,12 +115,22 @@ function fetchSinglePokemon(id) {
     })
 }
 
+class Pokemon {
+    constructor(name) {
+        this.id = 0,
+        this.name = name
+    }
+}
+
 const newPokemonButton = document.querySelector('button')
 
 newPokemonButton.addEventListener('click', function() {
-    let pokemonID = prompt('Enter an ID of an existing pokemon:')
-    fetchSinglePokemon(pokemonID)
-    if (pokemonID.length ===1){
-      pokemonID ="00" +pokemonID
-    }
+    
+    let pokemonName = prompt('Enter a Name of an existing pokemon:')
+    createPokeCard(new Pokemon(pokemonName))
+    // let pokemonID = prompt('Enter an ID of an existing pokemon:')
+    // fetchSinglePokemon(pokemonID)
+    // if (pokemonID.length ===1){
+    //   pokemonID ="00" +pokemonID
+    // }
   });

@@ -59,6 +59,7 @@ button {
     border: 1px solid #CCC;
     margin: 40px 0;
     perspective: 600px;
+    border-radius: 5%;
   }
 
 .card {
@@ -68,6 +69,7 @@ button {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  border-radius: 5%;
 }
 
 .card.is-flipped {
@@ -94,6 +96,7 @@ button {
 
 .card__face--back {
   transform: rotateY(180deg);
+  
 }
 
 .backImage {
@@ -102,5 +105,6 @@ button {
   opacity: 0.33;
   height: 258px;
   width: 198px;
+  border-radius: 5%;
 }
 

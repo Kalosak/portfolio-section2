@@ -79,6 +79,7 @@ pokemon.forEach(singleMon => {
       return response.json()
     })
     .then(function(myJson) {
+        // allFetchedPokemon.push(myJson)
       createPokeCard(matchIdToImage(myJson))
     })
 })
@@ -94,9 +95,13 @@ function matchIdToImage(aPokemon) {
         aPokemon.imageID = aPokemon.id
     }
 
+    if(aPokemon.name === "mr-mime") {
+        aPokemon.name = "mr. Mime"
+    }
+
     let dashIndex = aPokemon.name.indexOf('-')
     if (dashIndex !== -1) {
-        // Found a pokemon named who has a dash in their name
+        // Found a few pokemon who have a dash in their name
         aPokemon.name = aPokemon.name.slice(0, dashIndex)
     }
     aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
@@ -119,6 +124,13 @@ class Pokemon {
     constructor(name) {
         this.id = 0,
         this.name = name
+        // this.moves = {
+        //     {
+        //         move: {
+        //             name: 'Genius',
+        //         }
+        //     }
+        // }
     }
 }
 

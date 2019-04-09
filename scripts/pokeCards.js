@@ -1,11 +1,5 @@
 import { pokemon } from '../scripts/pokemon.js'
 
-// class Pokemon {
-//     constructor(id) {
-//         this.id = id
-//     }
-// }
-
 const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
@@ -69,9 +63,12 @@ function createPokeCard(pokeData) {
 
     card.appendChild(cardFront(pokeData))
     card.appendChild(cardBack(pokeData))
+
     scene.appendChild(card)
     mainContainer.appendChild(scene)
 }
+
+const allFetchedPokemon = []
 
 pokemon.forEach(singleMon => {
     fetch(singleMon.url)
@@ -79,12 +76,15 @@ pokemon.forEach(singleMon => {
       return response.json()
     })
     .then(function(myJson) {
-        // allFetchedPokemon.push(myJson)
+        allFetchedPokemon.push(myJson)
       createPokeCard(matchIdToImage(myJson))
     })
 })
 
 function matchIdToImage(aPokemon) {
+    if (aPokemon.id === 0) {
+        aPokemon.imageID = 0
+    }
     if(aPokemon.id < 10) {
         aPokemon.imageID = "00" + aPokemon.id
     }
@@ -113,36 +113,69 @@ function fetchSinglePokemon(id) {
     .then(function(response) {
         return response.json()
     })
-    .then(function(aPokemon) {
-        console.log(typeof(aPokemon.id))
-        
-        createPokeCard(matchIdToImage(aPokemon))
+    .then(function(retrievedPokemon) {
+        createPokeCard(matchIdToImage(retrievedPokemon))
     })
 }
 
 class Pokemon {
     constructor(name) {
         this.id = 0,
-        this.name = name
-        // this.moves = {
-        //     {
-        //         move: {
-        //             name: 'Genius',
-        //         }
-        //     }
-        // }
+        this.name = name,
+        this.moves = [
+          {
+            move: {
+              name: 'Falcon Punch',
+            },
+          },
+          {
+            move: {
+              name: 'Fire Kick',
+            },
+          },
+          {
+            move: {
+              name: 'Bouncing Blade',
+            },
+          },
+          {
+            move: {
+              name: 'Shunpo',
+            },
+          },
+        ]
     }
-}
+  }
 
-const newPokemonButton = document.querySelector('button')
+const jagomonButton = document.querySelector('#jagomon')
+const selectPokemonButton = document.querySelector('#fetchPokemon')
+const poketypeButton = document.querySelector('#poketype')
 
-newPokemonButton.addEventListener('click', function() {
+jagomonButton.addEventListener('click', function() {
+    createPokeCard(matchIdToImage(new Pokemon('jagomon')))
+})
+
+selectPokemonButton.addEventListener('click', function() {
+    let pokemonID = prompt('Enter an ID of an existing pokemon:')
+    fetchSinglePokemon(pokemonID)
+})
+
+poketypeButton.addEventListener('click', function() {
+    const poisonTypes = allFetchedPokemon.filter(pokemon => pokemon.types[0].type.name === "poison")
+
+console.log(poisonTypes)
+})
+
+
+// const newPokemonButton = document.querySelector('button')
+
+// newPokemonButton.addEventListener('click', function() {
     
-    let pokeName = prompt('Enter a Name of an existing pokemon:')
-    createPokeCard(new Pokemon(pokeName))
-    // let pokemonID = prompt('Enter an ID of an existing pokemon:')
-    // fetchSinglePokemon(pokemonID)
-    // if (pokemonID.length ===1){
-    //   pokemonID ="00" +pokemonID
-    // }
-  });
+//     let pokeName = prompt('Enter a Name of an existing pokemon:')
+//     createPokeCard(new Pokemon(pokeName))
+//     // let pokemonID = prompt('Enter an ID of an existing pokemon:')
+//     // fetchSinglePokemon(pokemonID)
+//     // if (pokemonID.length ===1){
+//     //   pokemonID ="00" +pokemonID
+//     // }
+//   });

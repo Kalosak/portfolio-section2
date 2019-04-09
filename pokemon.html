@@ -25,11 +25,16 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <header>
-    </header>
+    <header></header>
     <main>
       <div class="container"></div>
-      <button class="button">Create New Pokemon</button>
+      <button id="fetchPokemon">Fetch a specific Pokemon</button>
+      <button id="jagomon">Create a new Pokemon</button>
+      <div class="button is-primary">
+        <p>Choose how to filter your list of Pokemon:</p>
+        <input type="checkbox" id="poison" name="poison" />
+        <label for="poison">Poison</label>
+      </div>
     </main>
     <script src="/scripts/pokeCards.js" type="module"></script>
   </body>

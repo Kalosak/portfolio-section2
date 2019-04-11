@@ -33,6 +33,15 @@ header {
   padding: 30px;
 }
 
+.openingTag {
+  margin-top: 20px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  width: 70vw;
+  border-radius: 7px;
+}
+
 main {
   /* background-image: url('/pics/pokemonBackground.jpg');
   background-size: 100%; */

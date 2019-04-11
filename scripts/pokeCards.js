@@ -131,22 +131,22 @@ class Pokemon {
         this.moves = [
           {
             move: {
-              name: 'Falcon Punch',
+              name: prompt('Enter the first move:'),
             },
           },
           {
             move: {
-              name: 'Fire Kick',
+              name: prompt('Enter the second move:'),
             },
           },
           {
             move: {
-              name: 'Bouncing Blade',
+              name: prompt('Enter the third move:'),
             },
           },
           {
             move: {
-              name: 'Shunpo',
+              name: prompt('Enter the fourth move:'),
             },
           },
         ]

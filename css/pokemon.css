@@ -93,6 +93,9 @@ main {
 .infoDiv {
   position: relative;
   font-size: 1.5rem;
+  padding-top: 40px;
+  color: rgb(43, 43, 43);
+  text-shadow: 1px black;
 }
 
 .card__face--back {

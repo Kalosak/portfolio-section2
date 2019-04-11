@@ -29,10 +29,12 @@ function cardInfo(pokeData) {
     let moveTwo = document.createElement('p')
     let moveThree = document.createElement('p')
     let moveFour = document.createElement('p')
+
     moveOne.textContent = pokeData.moves[0].move.name
     moveTwo.textContent = pokeData.moves[1].move.name
     moveThree.textContent = pokeData.moves[2].move.name
     moveFour.textContent = pokeData.moves[3].move.name
+    
     infoDiv.appendChild(moveOne)
     infoDiv.appendChild(moveTwo)
     infoDiv.appendChild(moveThree)

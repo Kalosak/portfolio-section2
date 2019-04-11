@@ -96,6 +96,7 @@ main {
   padding-top: 40px;
   color: rgb(43, 43, 43);
   text-shadow: 1px black;
+  text-transform: capitalize;
 }
 
 .card__face--back {

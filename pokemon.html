@@ -16,7 +16,9 @@
       href="/css/pokemon.css"
     />
   </head>
+
   <body>
+<!-- ----------------------------------Nav Bar------------------------------------->
     <nav>
       <ul id="navbar">
         <li><a href="index.html">Home</a></li>
@@ -25,19 +27,91 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
+<!-- ------------------------Makes Everything under Nav Bar--------------------------->
+
     <header></header>
+
     <main>
+<!-- -------------------------Opening Statement for User------------------------------>
+
       <div class="openingTag">
         <h1>Here is a list of the first 151 Pokemon! If you click on the cards they will flip over and reveal there top 4 move list. Also if you know your favorite Pokemon number, feel free to add them to the list with the button below!</h1>
     </div>
+
+<!-- -------------------------All JavaScript in Container----------------------------->
+
       <div class="container"></div>
-      <button id="fetchPokemon">Fetch a specific Pokemon</button>
-      <button id="jagomon">Create a new Pokemon</button>
-      <div class="button is-primary">
-        <p>Choose how to filter your list of Pokemon:</p>
-        <input type="checkbox" id="poison" name="poison" />
-        <label for="poison">Poison</label>
+
+<!-- -------------------------Buttons at Bottom of Page------------------------------->
+
+      <div class="buttonContainer">
+        <div class="bcBorder">
+          <button id="fetchPokemon">Fetch a specific Pokemon</button>
+          <button id="jagomon">Create a new Pokemon</button>
+        </div>
       </div>
+
+<!-- ------------------------------Future Project------------------------------------>
+      <!-- <div class="button is-primary">
+        <div class="checkContainer">
+          <p>Choose how to filter your list of Pokemon:</p>
+
+          <input type="checkbox" id="fire" name="fire" />
+          <label for="fire">Fire</label>
+
+          <input type="checkbox" id="water" name="water" />
+          <label for="water">Water</label>
+
+          <input type="checkbox" id="grass" name="grass" />
+          <label for="grass">Grass</label>
+
+          <input type="checkbox" id="poison" name="poison" />
+          <label for="poison">Poison</label>
+
+          <input type="checkbox" id="ground" name="ground" />
+          <label for="ground">Ground</label>
+
+          <input type="checkbox" id="electric" name="electric" />
+          <label for="electric">Electric</label>
+
+          <input type="checkbox" id="normal" name="normal" />
+          <label for="normal">Normal</label>
+
+          <input type="checkbox" id="fairy" name="fairy" />
+          <label for="fairy">Fairy</label>
+
+          <input type="checkbox" id="fighting" name="fighting" />
+          <label for="fighting">Fighting</label>
+
+          <input type="checkbox" id="bug" name="bug" />
+          <label for="bug">Bug</label>
+
+          <input type="checkbox" id="ghost" name="ghost" />
+          <label for="ghost">Ghost</label>
+
+          <input type="checkbox" id="steel" name="steel" />
+          <label for="steel">Steel</label>
+
+          <input type="checkbox" id="rock" name="rock" />
+          <label for="rock">Rock</label>
+
+          <input type="checkbox" id="psychic" name="psychic" />
+          <label for="psychic">Psychic</label>
+
+          <input type="checkbox" id="dark" name="dark" />
+          <label for="dark">Dark</label>
+
+          <input type="checkbox" id="ice" name="ice" />
+          <label for="ice">Ice</label>
+
+          <input type="checkbox" id="dragon" name="dragon" />
+          <label for="dragon">Dragon</label>
+
+          <input type="checkbox" id="flying" name="flying" />
+          <label for="flying">Flying</label>
+        </div>
+      </div> -->
+
     </main>
     <script src="/scripts/pokeCards.js" type="module"></script>
   </body>

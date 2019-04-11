@@ -1,17 +1,14 @@
+/* ----------------------Background------------------------- */
 body {
   background-image: url('/pics/pokemonBackground4.png');
-  /* opacity: 0.7; */
-  /* background-size: 100%; */
 }
 
+/* ------------------------Nav Bar--------------------------- */
 nav ul {
   text-align: right;
   position: fixed;
   width: 100%;
-  
   background-image: linear-gradient(to right, rgba(250, 239, 239, 0), rgb(0, 0, 0));
-  /* border-bottom: solid thin #fff; */
-  
   z-index: 9999;
 }
 
@@ -29,10 +26,12 @@ nav ul li a:hover {
   color: rgb(80, 74, 74);
 }
 
+/* --------------Makes everything under Nav Bar--------------- */
 header {
   padding: 30px;
 }
 
+/* ---------------Opening Statement for User------------------ */
 .openingTag {
   margin-top: 20px;
   background-color: #fff;
@@ -43,38 +42,21 @@ header {
 }
 
 main {
-  /* background-image: url('/pics/pokemonBackground.jpg');
-  background-size: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* ----------------All JavaScript in Container--------------- */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* button {
-    width: 300px;
-    height: 80px;
-    background-color: aquamarine;
-    color: #fff;
-    font-size: 1.5rem;
-} */
-
-.box {
-    margin: 8px;
-    width: 120px;
-    height: 140px;
-    text-align: center;
-}
-
 .scene {
     width: 200px;
     height: 260px;
-    /* border: 1px solid #CCC; */
     margin: 40px 0;
     perspective: 600px;
     border-radius: 5%;
@@ -107,23 +89,40 @@ main {
     padding-top: 20px;
 }
 
+/* -----------------Info on Back of Card----------------- */
 .infoDiv {
   position: relative;
   font-size: 1.5rem;
-
 }
 
 .card__face--back {
   transform: rotateY(180deg);
-  
 }
 
 .backImage {
   position: absolute;
   left: 0;
   opacity: 0.33;
-  /* height: 258px;
-  width: 198px; */
+  height: 258.55px;
+  width: 198.55px;
   border-radius: 5%;
 }
 
+/* -------------Buttons at Bottom of Page---------------- */
+button {
+  height: 36px;
+  width: 250px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.buttonContainer {
+  display: flex;
+  margin: 20px;
+}
+
+.bcBorder {
+  border: solid rgb(53, 53, 53);
+  border-radius: 8px;
+  padding: 20px;
+}

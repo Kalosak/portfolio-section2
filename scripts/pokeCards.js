@@ -11,9 +11,9 @@ function cardFront(pokeData) {
 
     caption.textContent = pokeData.name
     if(pokeData.id !== 0) {
-        image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
+        image.src = `images/${pokeData.imageID}${pokeData.name}.png`
     } else {
-        image.src = `../images/pokeball.png`
+        image.src = `./pics/newPokeball.png`
     }
     
     figure.appendChild(image)
@@ -101,6 +101,10 @@ function matchIdToImage(aPokemon) {
         aPokemon.name = "mr. Mime"
     }
 
+    if(aPokemon.name === "mime-jr") {
+      aPokemon.name = "mime Jr."
+    }
+
     let dashIndex = aPokemon.name.indexOf('-')
     if (dashIndex !== -1) {
         // Found a few pokemon who have a dash in their name
@@ -154,7 +158,8 @@ const selectPokemonButton = document.querySelector('#fetchPokemon')
 const poketypeButton = document.querySelector('#poketype')
 
 jagomonButton.addEventListener('click', function() {
-    createPokeCard(matchIdToImage(new Pokemon('jagomon')))
+    let pokeName = prompt('Create a new Pokemon!:')
+    createPokeCard(new Pokemon(pokeName))
 })
 
 selectPokemonButton.addEventListener('click', function() {

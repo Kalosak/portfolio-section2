@@ -1,6 +1,6 @@
 /* ----------------------Background------------------------- */
 body {
-  background-image: url('/pics/pokemonBackground4.png');
+  background-image: url("../pics/pokemonBackground4.png");
 }
 
 /* ------------------------Nav Bar--------------------------- */

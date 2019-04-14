@@ -172,17 +172,3 @@ poketypeButton.addEventListener('click', function() {
 
 console.log(poisonTypes)
 })
-
-
-// const newPokemonButton = document.querySelector('button')
-
-// newPokemonButton.addEventListener('click', function() {
-    
-//     let pokeName = prompt('Enter a Name of an existing pokemon:')
-//     createPokeCard(new Pokemon(pokeName))
-//     // let pokemonID = prompt('Enter an ID of an existing pokemon:')
-//     // fetchSinglePokemon(pokemonID)
-//     // if (pokemonID.length ===1){
-//     //   pokemonID ="00" +pokemonID
-//     // }
-//   });

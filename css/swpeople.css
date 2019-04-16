@@ -39,12 +39,14 @@ nav ul {
     text-align: center;
 }
 
-div.box {
-  color: black;
-  font-weight: bold;
-}
-
 h1 {
   color: rgb(83, 83, 83);
   text-align: left;
+}
+
+.personName {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }

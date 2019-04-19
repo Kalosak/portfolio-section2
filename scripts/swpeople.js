@@ -30,6 +30,7 @@ console.log(allHomeWorlds)
 
 const mainContainer = document.querySelector(".container")
 
+// --------------------------Create the front of the Card----------------------------------------
 function cardFront(swData) {
   let cardFront = document.createElement("div")
   cardFront.className = "card__face card__face--front"
@@ -46,6 +47,7 @@ function cardFront(swData) {
 //   console.log(cardFront)
 }
 
+// --------------------------Create the data on back of Card----------------------------------------
 function cardInfo(swData) {
   let infoDiv = document.createElement("div")
   infoDiv.className = 'infoDiv'
@@ -74,6 +76,7 @@ function cardInfo(swData) {
 // console.log(infoDiv)
 }
 
+// --------------------------Create the back of the Card----------------------------------------
 function cardBack(swData) {
   let cardBack = document.createElement("div")
   let backImage = document.createElement("img")
@@ -85,6 +88,7 @@ function cardBack(swData) {
   return cardBack
 }
 
+// ---------------------------------Create's the Card-------------------------------------------
 function createCard(swData) {
   let scene = document.createElement("div")
   scene.className = "scene"

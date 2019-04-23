@@ -31,26 +31,26 @@ console.log(allHomeWorlds)
 const mainContainer = document.querySelector(".container")
 
 // --------------------------Create the front of the Card----------------------------------------
-function cardFront(swData) {
-  let cardFront = document.createElement("div")
+const swCardFront = allHomeWorlds.forEach((cardFront) => {
+  cardFront = document.createElement("div")
   cardFront.className = "card__face card__face--front"
   let figure = document.createElement("figure")
   let caption = document.createElement("figcaption")
   let imageElement = document.createElement("img")
 
-  imageElement.src = allHomeWorlds.imagePath
+  imageElement.src = cardFront.imagePath
 
   figure.appendChild(imageElement)
   figure.appendChild(caption)
   cardFront.appendChild(figure)
   return cardFront
 //   console.log(cardFront)
-}
+})
 
 // --------------------------Create the data on back of Card----------------------------------------
-function cardInfo(swData) {
-  let infoDiv = document.createElement("div")
-  infoDiv.className = 'infoDiv'
+const swCardInfo = allHomeWorlds.forEach((cardInfo) => {
+  cardInfo = document.createElement("div")
+  cardInfo.className = 'cardInfo'
   let planetElement = document.createElement("h1")
   let skinElement = document.createElement("h1")
   let eyeElement = document.createElement("h1")
@@ -61,37 +61,37 @@ function cardInfo(swData) {
   let strEye = "Eye Color: "
   let strHair = "Hair Color: "
 
-  infoDiv.className = "box"
-  planetElement.textContent = strHome + person.home
-  skinElement.textContent = strSkin + person.skin
-  eyeElement.textContent = strEye + person.eye
-  hairElement.textContent = strHair + person.hair
+  cardInfo.className = "box"
+  planetElement.textContent = strHome + cardInfo.home
+  skinElement.textContent = strSkin + cardInfo.skin
+  eyeElement.textContent = strEye + cardInfo.eye
+  hairElement.textContent = strHair + cardInfo.hair
 
-  infoDiv.appendChild(planetElement)
-  infoDiv.appendChild(skinElement)
-  infoDiv.appendChild(eyeElement)
-  infoDiv.appendChild(hairElement)
-  mainContainer.appendChild(infoDiv)
-  return infoDiv
-// console.log(infoDiv)
-}
+  cardInfo.appendChild(planetElement)
+  cardInfo.appendChild(skinElement)
+  cardInfo.appendChild(eyeElement)
+  cardInfo.appendChild(hairElement)
+  mainContainer.appendChild(cardInfo)
+  return cardInfo
+// console.log(cardInfo)
+})
 
 // --------------------------Create the back of the Card----------------------------------------
-function cardBack(swData) {
-  let cardBack = document.createElement("div")
+const swCardBack = allHomeWorlds.forEach((cardBack) => {
+  cardBack = document.createElement("div")
   let backImage = document.createElement("img")
   backImage.className = "backImage"
   backImage.src = "./pics/pokeball5.jpg"
   cardBack.className = "card__face card__face--back"
   cardBack.appendChild(backImage)
-  cardBack.appendChild(cardInfo(swData))
+  cardBack.appendChild(swCardInfo)
   return cardBack
-}
+})
 
 // ---------------------------------Create's the Card-------------------------------------------
-function createCard(swData) {
-  let scene = document.createElement("div")
-  scene.className = "scene"
+allHomeWorlds.forEach((createCard) => {
+  createCard = document.createElement("div")
+  createCard.className = "createCard"
   let card = document.createElement("div")
   card.className = "card"
 
@@ -99,21 +99,16 @@ function createCard(swData) {
     card.classList.toggle("is-flipped")
   })
 
-  card.appendChild(cardFront(swData))
-  card.appendChild(cardBack(swData))
+  card.appendChild(swCardFront(cardFront))
+  card.appendChild(swCardBack(cardBack))
 
-  scene.appendChild(card)
-  mainContainer.appendChild(scene)
-}
-
-const allFetchedPeople = []
-
-// -------------------
-
-
-allHomeWorlds.forEach((person) => {
-    createCard()
+  createCard.appendChild(card)
+  mainContainer.appendChild(createCard)
 })
+
+document.body.appendChild(mainContainer)
+// -------------------
+//console.log(createCard)
 // swPerson.forEach((swPerson) => {
 //   fetch(swPerson.url)
 //     .then(function(response) {
@@ -125,8 +120,6 @@ allHomeWorlds.forEach((person) => {
 //       createCard(matchIdToImage(myJson))
 //     })
 // })
-
-document.body.appendChild(mainContainer)
 
 // -----------------
 

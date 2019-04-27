@@ -60,8 +60,6 @@ const swCardFront = allHomeWorlds.forEach((cardFront) => {
 //   console.log(cardFront)
 })
 
-
-
 // --------------------------Create the data on back of Card----------------------------------------
 const swCardInfo = allHomeWorlds.forEach((cardInfo) => {
   cardInfo = document.createElement("div")

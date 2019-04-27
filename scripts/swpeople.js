@@ -107,6 +107,7 @@ allHomeWorlds.forEach((createCard) => {
 })
 
 document.body.appendChild(mainContainer)
+
 // -------------------
 //console.log(createCard)
 // swPerson.forEach((swPerson) => {

@@ -75,3 +75,5 @@ allHomeWorlds.forEach((person) => {
 })
 
 document.body.appendChild(mainContainer)
+
+//add toggle to personElement.className('click',') function "add classname 'hidden'"

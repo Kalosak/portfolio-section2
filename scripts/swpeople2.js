@@ -31,18 +31,18 @@ console.log(allHomeWorlds)
 
 const mainContainer = document.querySelector(".container")
 
-allHomeWorlds.forEach((person) => {
-    let personElement = document.createElement('div')
-    let imageElement = document.createElement('img')
+// allHomeWorlds.forEach((person) => {
+//     let personElement = document.createElement('div')
+//     let imageElement = document.createElement('img')
 
-    personElement.className = 'box'
-    personElement.textContent = person.name
+//     personElement.className = 'box'
+//     personElement.textContent = person.name
 
-    imageElement.src = person.imagePath
+//     imageElement.src = person.imagePath
   
-    personElement.appendChild(imageElement)
-    mainContainer.appendChild(personElement)
-})
+//     personElement.appendChild(imageElement)
+//     mainContainer.appendChild(personElement)
+// })
 
 allHomeWorlds.forEach((person) => {
   let personElement = document.createElement('div')
